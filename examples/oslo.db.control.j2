@@ -1,0 +1,89 @@
+Source: {{ py2name('oslo.db') }}
+Section: python
+Priority: optional
+Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Uploaders: Thomas Goirand <zigo@debian.org>,
+           Corey Bryant <corey.bryant@canonical.com>,
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               openstack-pkg-tools,
+               python-all,
+               {{ py2pkg('pbr') }},
+               {{ py2pkg('setuptools') }},
+               {{ py2pkg('Sphinx') }},
+               python3-all,
+               {{ py3pkg('pbr') }},
+               python3-setuptools (>= 16.0),
+Build-Depends-Indep: {{ py2pkg('alembic') }},
+                     {{ py2pkg('Babel') }},
+                     {{ py2pkg('coverage') }},
+                     {{ py2pkg('eventlet') }},
+                     {{ py2pkg('fixtures') }},
+                     {{ py2pkg('hacking') }},
+                     {{ py2pkg('sqlalchemy-migrate') }},
+                     {{ py2pkg('mock') }},
+                     {{ py2pkg('oslo.config') }},
+                     {{ py2pkg('oslo.context') }},
+                     {{ py2pkg('oslo.i18n') }},
+                     {{ py2pkg('oslo.utils') }},
+                     {{ py2pkg('oslosphinx') }},
+                     {{ py2pkg('oslotest') }},
+                     {{ py2pkg('psycopg2') }},
+                     {{ py2pkg('PyMySQL') }},
+                     {{ py2pkg('six') }},
+                     {{ py2pkg('SQLAlchemy') }},
+                     {{ py2pkg('stevedore') }},
+                     {{ py2pkg('tempest-lib') }},
+                     {{ py2pkg('testresources') }},
+                     {{ py2pkg('testtools') }},
+                     {{ py3pkg('alembic') }},
+                     {{ py3pkg('Babel') }},
+                     {{ py3pkg('eventlet') }},
+                     {{ py3pkg('fixtures') }},
+                     {{ py3pkg('sqlalchemy-migrate') }},
+                     {{ py3pkg('mock') }},
+                     {{ py3pkg('oslo.config') }},
+                     {{ py3pkg('oslo.context') }},
+                     {{ py3pkg('oslo.i18n') }},
+                     {{ py3pkg('oslo.utils') }},
+                     {{ py3pkg('oslotest') }},
+                     {{ py3pkg('psycopg2') }},
+                     {{ py3pkg('PyMySQL') }},
+                     {{ py3pkg('six') }},
+                     {{ py3pkg('SQLAlchemy') }},
+                     {{ py3pkg('stevedore') }},
+                     {{ py3pkg('python-subunit') }},
+                     {{ py3pkg('tempest-lib') }},
+                     {{ py3pkg('testresources') }},
+                     {{ py3pkg('testtools') }},
+                     {{ py2pkg('python-subunit') }},
+                     {{ py2pkg('testrepository') }},
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/openstack/python-oslo.db.git/
+Vcs-Git: https://anonscm.debian.org/git/openstack/python-oslo.db.git
+Homepage: https://launchpad.net/oslo
+
+Package: {{ py2name('oslo.db') }}
+Architecture: all
+Provides: {{ py2name('oslo.db') }},
+Depends: {{ py2pkg('alembic') }},
+         {{ py2pkg('Babel') }},
+         {{ py2pkg('sqlalchemy-migrate') }},
+         {{ py2pkg('oslo.config') }},
+         {{ py2pkg('oslo.context') }},
+         {{ py2pkg('oslo.i18n') }},
+         {{ py2pkg('oslo.utils') }},
+         {{ py2pkg('pbr') }},
+         {{ py2pkg('six') }},
+         {{ py2pkg('SQLAlchemy') }},
+         {{ py2pkg('stevedore') }},
+         ${misc:Depends},
+         ${python:Depends},
+Breaks: {{ py2name('oslo.db') }} (<< 1.10.0-1~),
+Replaces: {{ py2name('oslo.db') }} (<< 1.10.0-1~),
+Description: database connectivity to the different backends and helper utils - Python 2.x
+ The Oslo database handling library is part of the OpenStack project. It
+ provides database connectivity to the different backends and also provides
+ helper utils.
+ .
+ This package contains the Python 2.x module.

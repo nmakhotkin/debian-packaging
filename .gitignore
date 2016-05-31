@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# IDE files
+.idea
+
+# Program results
+*.control
